@@ -2,13 +2,12 @@
     <main>
         <h1>Welcome to Speech Text Project</h1>
 
-        
-        <div class="app__try-button">
+        <div>
           
-          <textarea class="text-field" placeholder="Text from Speech" rows="5" v-model="speech"></textarea>
+            <textarea class="text-field" placeholder="Text from Speech" rows="5" v-model="speech"></textarea>
 
-          <SpeechToText class="app__stt-button" @speech="onSpeechReceived($event)"/>
-      </div>
+            <SpeechToText class="app__stt-button" @speech="onSpeechReceived($event)"/>
+        </div>
        
     </main>
     

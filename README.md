@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Speech Recgonition API
+
+https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition

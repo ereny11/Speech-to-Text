@@ -27,15 +27,6 @@ export default class SpeechToText {
             console.log('Speech end');
             this.resultSubject.next('');
         };
-
-        this.recognition.onnomatch = () => {
-            console.log("I didn't recognise that colors.");
-        };
-
-        this.recognition.onerror = (event) => {
-            console.log(`Error occurred in recognition: ${event.error}`);
-            this.resultSubject.error(`Error occurred in recognition: ${event.error}`);
-        };
     }
 
     speak() {

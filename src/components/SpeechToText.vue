@@ -1,13 +1,10 @@
 <template>
     <div>
-        <div class="speech-to-text__button-container">
-            <div @click="onClick()" :class="{ 'speech-to-text__button--speaking': isSpeaking }"
-                    class="speech-to-text__button">
-                    <button v-if="!isSpeaking" class="btn record-btn">Record Audio</button>
-                    <button v-if="isSpeaking" class="btn stop-btn">Stop Record</button>
-                    
-                </div>
-            </div>
+        <div @click="onClick()" :class="isSpeaking">
+            <button v-if="!isSpeaking" class="btn record-btn">Record Audio</button>
+            <button v-if="isSpeaking" class="btn stop-btn">Stop Record</button>
+            
+        </div>
     </div>
 </template>
 
@@ -32,7 +29,6 @@ export default {
                     this.speech = result;
                     this.$emit('speech', this.speech);
                     this.isSpeaking = false;
-                    // console.log('Result', result);
                 },
                 (error) => {
                     console.log('Error', error);
@@ -59,6 +55,7 @@ export default {
     border: 1px solid #A9A9A9;
     border-radius: 8px;
     padding: 10px;
+    transition: 0.2s ease-in-out;
 }
 .record-btn{
     background-color: #FFFFFF;
