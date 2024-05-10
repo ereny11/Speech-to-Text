@@ -1,6 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-undef */
-
 import { Subject } from 'rxjs';
 
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
